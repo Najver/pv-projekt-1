@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace pv_projekt
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -21,6 +21,10 @@ namespace pv_projekt
                     if (size <= 0)
                     {
                         Console.WriteLine("Velikost matice musí být kladné číslo větší než 0. Zkus to znovu.");
+                        continue;
+                    }else if (size > 20)
+                    {
+                        Console.WriteLine("Velikost matice nemůže být větší než 20. Zkus to znovu.");
                         continue;
                     }
                     break;
@@ -93,7 +97,7 @@ namespace pv_projekt
         }
     }
 
-    class MatrixMultiplier
+    public class MatrixMultiplier
     {
         private int[,] MatrixA;
         private int[,] MatrixB;
