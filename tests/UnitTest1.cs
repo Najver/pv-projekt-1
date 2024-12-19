@@ -82,21 +82,46 @@ namespace pv_projekt
             // Assert
             Assert.That(result, Is.EqualTo(expected));
         }
-
         [Test]
-        public void TestMatrixMultiplication_DifferentSizes_ThrowsException()
+        public void TestMatrixMultiplication_NegativeNumbers()
         {
             // Arrange
-            int[,] matrixA = new int[,] { { 1, 2 }, { 3, 4 } };
-            int[,] matrixB = new int[,] { { 5, 6, 7 }, { 8, 9, 10 } };
-            int[,] result = new int[2, 3]; // Invalid size for result
+            int[,] matrixA = new int[,] { { -1, -2 }, { -3, -4 } };
+            int[,] matrixB = new int[,] { { -5, -6 }, { -7, -8 } };
+            int[,] expected = new int[,] { { 19, 22 }, { 43, 50 } };
+            int[,] result = new int[2, 2];
 
-            // Act & Assert
-            Assert.Throws<ArgumentException>(() =>
+            MatrixMultiplier multiplier = new MatrixMultiplier(matrixA, matrixB, result);
+
+            // Act
+            multiplier.ParallelMultiply();
+
+            // Assert
+            Assert.That(result, Is.EqualTo(expected));
+        }
+        [Test]
+        public void TestMatrixMultiplication_UnevenRowDistribution()
+        {
+            // Arrange
+            int[,] matrixA = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12 }, { 13, 14, 15 } };
+            int[,] matrixB = new int[,] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
+            int[,] expected = new int[,]
             {
-                MatrixMultiplier multiplier = new MatrixMultiplier(matrixA, matrixB, result);
-                multiplier.ParallelMultiply();
-            });
+                { 38, 44, 50, 56 },
+                { 83, 98, 113, 128 },
+                { 128, 152, 176, 200 },
+                { 173, 206, 239, 272 },
+                { 218, 260, 302, 344 }
+            };
+            int[,] result = new int[5, 4];
+
+            MatrixMultiplier multiplier = new MatrixMultiplier(matrixA, matrixB, result);
+
+            // Act
+            multiplier.ParallelMultiply();
+
+            // Assert
+            Assert.That(result, Is.EqualTo(expected));
         }
     }
 }
