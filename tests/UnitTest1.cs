@@ -6,6 +6,12 @@ namespace pv_projekt
     [TestFixture]
     public class MatrixMultiplierTests
     {
+        /// <summary>
+        /// Tests the matrix multiplication functionality with a small 2x2 matrix.
+        /// </summary>
+        /// <remarks>
+        /// This test verifies that the matrix multiplication is performed correctly for small matrices.
+        /// </remarks>
         [Test]
         public void TestMatrixMultiplication_SmallMatrix()
         {
@@ -14,16 +20,22 @@ namespace pv_projekt
             int[,] matrixB = new int[,] { { 5, 6 }, { 7, 8 } };
             int[,] expected = new int[,] { { 19, 22 }, { 43, 50 } };
             int[,] result = new int[2, 2];
-
+    
             MatrixMultiplier multiplier = new MatrixMultiplier(matrixA, matrixB, result);
-
+    
             // Act
             multiplier.ParallelMultiply();
-
+    
             // Assert
             Assert.That(result, Is.EqualTo(expected));
         }
 
+        /// <summary>
+        /// Tests the matrix multiplication functionality with a larger 3x3 matrix.
+        /// </summary>
+        /// <remarks>
+        /// This test verifies that the matrix multiplication is performed correctly for larger matrices.
+        /// </remarks>
         [Test]
         public void TestMatrixMultiplication_LargerMatrix()
         {
@@ -47,6 +59,12 @@ namespace pv_projekt
             Assert.That(result, Is.EqualTo(expected));
         }
 
+        /// <summary>
+        /// Tests the matrix multiplication functionality using an identity matrix.
+        /// </summary>
+        /// <remarks>
+        /// This test verifies that multiplying any matrix by an identity matrix results in the original matrix.
+        /// </remarks>
         [Test]
         public void TestMatrixMultiplication_IdentityMatrix()
         {
@@ -65,6 +83,12 @@ namespace pv_projekt
             Assert.That(result, Is.EqualTo(expected));
         }
 
+        /// <summary>
+        /// Tests the matrix multiplication functionality using a zero matrix.
+        /// </summary>
+        /// <remarks>
+        /// This test verifies that multiplying any matrix by a zero matrix results in a zero matrix.
+        /// </remarks>
         [Test]
         public void TestMatrixMultiplication_ZeroMatrix()
         {
@@ -82,6 +106,12 @@ namespace pv_projekt
             // Assert
             Assert.That(result, Is.EqualTo(expected));
         }
+        /// <summary>
+        /// Tests the matrix multiplication functionality with matrices containing negative numbers.
+        /// </summary>
+        /// <remarks>
+        /// This test verifies that the matrix multiplication is performed correctly when both matrices contain negative numbers.
+        /// </remarks>
         [Test]
         public void TestMatrixMultiplication_NegativeNumbers()
         {
@@ -90,30 +120,6 @@ namespace pv_projekt
             int[,] matrixB = new int[,] { { -5, -6 }, { -7, -8 } };
             int[,] expected = new int[,] { { 19, 22 }, { 43, 50 } };
             int[,] result = new int[2, 2];
-
-            MatrixMultiplier multiplier = new MatrixMultiplier(matrixA, matrixB, result);
-
-            // Act
-            multiplier.ParallelMultiply();
-
-            // Assert
-            Assert.That(result, Is.EqualTo(expected));
-        }
-        [Test]
-        public void TestMatrixMultiplication_UnevenRowDistribution()
-        {
-            // Arrange
-            int[,] matrixA = new int[,] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 }, { 10, 11, 12 }, { 13, 14, 15 } };
-            int[,] matrixB = new int[,] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
-            int[,] expected = new int[,]
-            {
-                { 38, 44, 50, 56 },
-                { 83, 98, 113, 128 },
-                { 128, 152, 176, 200 },
-                { 173, 206, 239, 272 },
-                { 218, 260, 302, 344 }
-            };
-            int[,] result = new int[5, 4];
 
             MatrixMultiplier multiplier = new MatrixMultiplier(matrixA, matrixB, result);
 

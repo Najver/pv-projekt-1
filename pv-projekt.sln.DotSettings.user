@@ -4,12 +4,12 @@
     &lt;TestId&gt;NUnit3x::7ECB9C7D-E988-4F77-8F59-A3D952D9D01B::net7.0::pv_projekt.MatrixMultiplierTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c1b2f959_002D1722_002D4aa0_002D85a5_002D757bf28776c3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TestMatrixMultiplication_SmallMatrix" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c1b2f959_002D1722_002D4aa0_002D85a5_002D757bf28776c3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="TestMatrixMultiplication_SmallMatrix" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::7ECB9C7D-E988-4F77-8F59-A3D952D9D01B::net7.0::pv_projekt.MatrixMultiplierTests.TestMatrixMultiplication_SmallMatrix&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::7ECB9C7D-E988-4F77-8F59-A3D952D9D01B::net7.0::pv_projekt.MatrixMultiplierTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fcad8d9d_002D35de_002D48da_002D9d4e_002Dc5d93ae77247/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="MatrixMultiplierTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=fcad8d9d_002D35de_002D48da_002D9d4e_002Dc5d93ae77247/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="MatrixMultiplierTests #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;NUnit3x::7ECB9C7D-E988-4F77-8F59-A3D952D9D01B::net7.0::pv_projekt.MatrixMultiplierTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
