@@ -73,6 +73,9 @@ namespace pv_projekt
 
             Console.WriteLine("\nVýsledek (Matice C):");
             PrintMatrix(result);
+            
+            Console.WriteLine("\nStiskněte ENTER pro ukončení...");
+            Console.ReadLine();
         }
 
         /// <summary>
