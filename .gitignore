@@ -1,3 +1,5 @@
 .idea
 pv-projekt/bin
 pv-projekt/obj
+tests/bin
+tests/obj
