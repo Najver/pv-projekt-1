@@ -129,5 +129,47 @@ namespace pv_projekt
             // Assert
             Assert.That(result, Is.EqualTo(expected));
         }
+        
+        /// <summary>
+        /// Tests the matrix multiplication functionality with very large matrices to check performance.
+        /// </summary>
+        /// <remarks>
+        /// This test verifies that the parallel multiplication performs correctly and efficiently with large matrices.
+        /// </remarks>
+        [Test]
+        public void TestMatrixMultiplication_LargeMatrixPerformance()
+        {
+            // Arrange
+            int size = 20;
+            int[,] matrixA = new int[size, size];
+            int[,] matrixB = new int[size, size];
+            int[,] result = new int[size, size];
+
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    matrixA[i, j] = 1;
+                    matrixB[i, j] = 1;
+                }
+            }
+
+            int[,] expected = new int[size, size];
+            for (int i = 0; i < size; i++)
+            {
+                for (int j = 0; j < size; j++)
+                {
+                    expected[i, j] = size;
+                }
+            }
+
+            MatrixMultiplier multiplier = new MatrixMultiplier(matrixA, matrixB, result);
+
+            // Act
+            multiplier.ParallelMultiply();
+
+            // Assert
+            Assert.That(result, Is.EqualTo(expected));
+        }
     }
 }

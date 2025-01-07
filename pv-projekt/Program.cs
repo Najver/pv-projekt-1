@@ -31,9 +31,9 @@ namespace pv_projekt
                         Console.WriteLine("Velikost matice musí být kladné číslo větší než 0. Zkus to znovu.");
                         continue;
                     }
-                    else if (size > 20)
+                    else if (size > 100)
                     {
-                        Console.WriteLine("Velikost matice nemůže být větší než 20. Zkus to znovu.");
+                        Console.WriteLine("Velikost matice nemůže být větší než 100. Zkus to znovu.");
                         continue;
                     }
                     break;
